@@ -244,7 +244,7 @@ def user_stats(df, city):
 
 def view_data(df):
     """ 
-    Display raw data by the user requet
+    Display raw data with 5 rows of individual trip data
     """
     
     viewData = input('\nWould you like to view 5 rows of individual trip data? Enter yes or no\n').lower()
