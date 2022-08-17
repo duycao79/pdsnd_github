@@ -1,6 +1,7 @@
 import time
 import pandas as pd
 import numpy as np
+from tabulate import tabulate
 
 CITY_DATA = {
     "chicago": "chicago.csv",
@@ -251,10 +252,11 @@ def view_data(df):
     
     #TO DO: Display raw data to view 5 rows of individual trip data
     pd.set_option("display.max_columns",200)
-    
+
     start_loc = 0
     while viewData == "yes":
-        print(df.iloc[start_loc:start_loc + 5])
+        #print(df.iloc[start_loc:start_loc + 5])
+        print(tabulate(df.iloc[np.arange(0+start_loc,5+start_loc)], headers ="keys"))
         start_loc += 5
         viewData = input("Do you wish to continue?: ").lower()
 
