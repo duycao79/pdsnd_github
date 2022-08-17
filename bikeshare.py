@@ -250,6 +250,8 @@ def view_data(df):
     viewData = input('\nWould you like to view 5 rows of individual trip data? Enter yes or no\n').lower()
     
     #TO DO: Display raw data to view 5 rows of individual trip data
+    pd.set_option("display.max_columns",200)
+    
     start_loc = 0
     while viewData == "yes":
         print(df.iloc[start_loc:start_loc + 5])
